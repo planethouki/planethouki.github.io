@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>faucet elephant</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <div class="uk-container">
+                <p class="uk-margin-top">
+                    <a class="uk-button uk-button-default uk-button-small" href="../../nem.html">Back</a>
+                </p>
+            </div>
+            <div class="uk-section">
+                <div class="uk-container">
+                    <h3>Faucet Elephant</h3>
+                    <div class="uk-margin">
+                        <input class="uk-input" type="text" placeholder="Address" v-model="address">
+                    </div>
+                    <button class="uk-button uk-button-default" @click="get" :disabled="wait">Get</button>
+                    <div uk-spinner v-if="wait"></div>
+                    
+                    <div class="uk-margin">
+                        <div uk-alert class="uk-alert-danger" v-if="alert">{{ alert }}</div>
+                        <ul class="uk-list">
+                            <li v-for="h in hashes">
+                                <a :href="h.link" target="_blank">{{ h.hash }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    hashes: [],
+                    wait: false,
+                    alert: '',
+                    address: '',
+                    api: 'https://faucet-elephant-api.azurewebsites.net/api/HttpTrigger',
+                    node: 'http://elephant.48gh23s.xyz:3000'
+                },
+                methods: {
+                    get() {
+                        this.alert = ''
+                        this.wait = true
+                        if (!this.address) {
+                            this.alert = "blank address"
+                            this.wait = false
+                            return
+                        }
+                        axios.get(`${this.api}?recipient=${this.address}`).then((res) => {
+                            this.hashes.push({
+                                hash: res.data,
+                                link: `${this.node}/transaction/${res.data}/status`
+                            })
+                        }).catch(() => {
+                            this.alert = 'error'
+                        }).finally(() => {
+                            this.wait = false
+                        })
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>
