@@ -1,18 +1,21 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154588991-2"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-154588991-2');
+	</script>
 
 	<meta charset=utf8 />
 	<title>planethouki</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 	<link rel="stylesheet" type="text/css" href="https://rawgit.com/outboxcraft/beauter/master/beauter.min.css"/>
-
-	<style>
-		.none {
-			display: none;
-		}
-	</style>
 
 </head>
 <body>
@@ -100,34 +103,14 @@
 	</div>
 
 	<div style="height:10rem;"></div>
-	
-	<div class="container none" id="ports">
-		<div class="row">
-			<h5 class="_alignCenter">Port List</h5>
-			<div class="m10 off-1">
-				<dl>
-					<dt>7778</dt>
-					<dd>nem testnet websocket</dd>
-					<dt>7779</dt>
-					<dd>nem testnet websocket (wss only)</dd>
-					<dt>7890</dt>
-					<dd>nem testnet API & node</dd>
-					<dt>7891</dt>
-					<dd>nem testnet API (https only)</dd>
-					</dd>
-					<dt>25565</dt>
-					<dd>minecraft spigot</dd>
-				</dl>
-			</div>
-		</div>
+
+	<div class="container">
+		<a href="privacy.html">プライバシーポリシー</a>
 	</div>
+	
 
 	<script src="https://rawgit.com/outboxcraft/beauter/master/beauter.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		if (window.location.host === "planethouki.ddns.net")
-			$("#ports").removeClass("none");
-	</script>
 
 </body>
 </html>
