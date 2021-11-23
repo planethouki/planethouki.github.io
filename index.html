@@ -18,8 +18,20 @@
 	<link rel="stylesheet" type="text/css" href="https://rawgit.com/outboxcraft/beauter/master/beauter.min.css"/>
 
   <style>
-    .card .-image {
+    #social .card {
+      min-height: 150px;
+    }
+    #social .card .-image {
       height: 100px;
+    }
+    #apps .card {
+      min-height: 250px;
+    }
+    #apps .card .-image {
+      height: 150px;
+    }
+    .card .-content span {
+      color: lightgray;
     }
   </style>
 
@@ -33,7 +45,10 @@
 		<p>planet★箒星</p>
 	</div>
 
-	<div class="container">
+	<div id="social" class="container">
+    <h3 class="_alignCenter" style="color: lightgray;">
+      Social
+    </h3>
 		<div class="row">
 			<div class="col m4">
 				<div class="card">
@@ -42,6 +57,8 @@
 					</a>
 					<div class="-content _alignCenter">
 						<strong>Twitter</strong>
+            <br />
+            <span>よしなしごと</span>
 					</div>
 				</div>
 			</div>
@@ -52,6 +69,8 @@
 					</a>
 					<div class="-content _alignCenter">
 						<strong>Instagram</strong>
+            <br />
+            <span>主に鉄道</span>
 					</div>
 				</div>
 			</div>
@@ -62,16 +81,8 @@
 					</a>
 					<div class="-content _alignCenter">
 						<strong>YouTube</strong>
-					</div>
-				</div>
-			</div>
-			<div class="col m4">
-				<div class="card">
-					<a class="" href="https://planethouki.github.io/houkiserver/" target="_blank">
-						<img src="img/minecraft.jpg" class="_width100 -image" />
-					</a>
-					<div class="-content _alignCenter">
-						<strong>Minecraft Server</strong>
+            <br />
+            <span>鉄道・マイクラ・xR</span>
 					</div>
 				</div>
 			</div>
@@ -82,6 +93,8 @@
 					</a>
 					<div class="-content _alignCenter">
 						<strong>Blog</strong>
+            <br />
+            <span>主にマイクラ</span>
 					</div>
 				</div>
 			</div>
@@ -92,6 +105,8 @@
 					</a>
 					<div class="-content _alignCenter">
 						<strong>Github</strong>
+            <br />
+            <span>週末開発</span>
 					</div>
 				</div>
 			</div>
@@ -102,16 +117,8 @@
 					</a>
 					<div class="-content _alignCenter">
 						<strong>Qiita</strong>
-					</div>
-				</div>
-			</div>
-			<div class="col m4">
-				<div class="card">
-					<a class="" href="https://planethouki.github.io/crypt-oink-explorer/" target="_blank">
-						<img src="img/crypt-oink-explorer.jpg" class="_width100 -image" />
-					</a>
-					<div class="-content _alignCenter">
-						<strong>Crypt-Oink-Explorer</strong>
+            <br />
+            <span>主にブロックチェーン</span>
 					</div>
 				</div>
 			</div>
@@ -119,6 +126,42 @@
 	</div>
 
 	<div style="height:10rem;"></div>
+
+  <div id="apps" class="container">
+    <h3 class="_alignCenter" style="color: lightgray;">
+      Apps/Services
+    </h3>
+    <div class="row">
+      <div class="col m6">
+        <div class="card">
+          <a class="" href="https://planethouki.github.io/crypt-oink-explorer/" target="_blank">
+            <div class="_width100 -image" style="background: url('img/crypt-oink-explorer.jpg');"></div>
+          </a>
+          <div class="-content _alignCenter">
+            <strong>Crypt-Oink-Explorer</strong>
+            <br />
+            <span>ブロックチェーンゲームのくりぷ豚のNFTを一覧表示するサービス。</span>
+            <br />
+            <span>フロントはNuxt.jsで、バックはLambda+Infulaにて構築。</span>
+          </div>
+        </div>
+      </div>
+      <div class="col m6">
+        <div class="card">
+          <a class="" href="https://planethouki.github.io/houkiserver/" target="_blank">
+            <div class="_width100 -image" style="background: center / cover no-repeat url('img/minecraft.jpg');"></div>
+          </a>
+          <div class="-content _alignCenter">
+            <strong>Minecraft Server</strong>
+            <br />
+            <span>Minecraft Java版の公開マルチプレイサーバー。もうすぐ終了。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:10rem;"></div>
 
 	<div class="container _alignCenter">
 		<img src="img/twins-small.png" />
