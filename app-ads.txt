@@ -118,19 +118,9 @@ yandex.com, 97539269, RESELLER
 yeahmobi.com, 5135195, RESELLER
 
 
-vidcrunch.com, 5fb267bc6e2dd520fd551415, RESELLER
-freewheel.tv, 895601, RESELLER
-freewheel.tv, 895617, RESELLER
-improvedigital.com, 1171, RESELLER
-improvedigital.com, 1767, RESELLER
-improvedigital.com, 1769, RESELLER
-improvedigital.com, 1771, RESELLER  
-google.com, pub-9417114411593463, RESELLER, f08c47fec0942fa0
-spotxchange.com, 271911, RESELLER, 7842df1d2fe2db34
-spotx.tv, 271911, RESELLER, 7842df1d2fe2db34
-smartadserver.com, 3686, RESELLER  
-rhythmone.com, 456081263, RESELLER, a670c89d4a324e47
-video.unrulymedia.com, 456081263, RESELLER
+##Mobfox##
+mobfox.com, publisher_id, DIRECT, 5529a3d1f59865be
+
 appnexus.com,2637,RESELLER,f5ab79cb980f11d1
 smartyads.com,188,RESELLER
 smartyads.com,244,RESELLER
@@ -148,3 +138,16 @@ pubmatic.com,156451,RESELLER,5d62403b186f2ace
 rubiconproject.com,13132,RESELLER,0bfd66d529a55807
 admixer.net,3f77a1dd-9fe0-4634-8a29-3412895010c2,RESELLER
 admixer.net,4f1e5aab-5f2d-4bf6-b9ed-6b33ef534e04,RESELLER
+vidcrunch.com, 5fb267bc6e2dd520fd551415, RESELLER
+freewheel.tv, 895601, RESELLER
+freewheel.tv, 895617, RESELLER
+improvedigital.com, 1171, RESELLER
+improvedigital.com, 1767, RESELLER
+improvedigital.com, 1769, RESELLER
+improvedigital.com, 1771, RESELLER 
+google.com, pub-9417114411593463, RESELLER, f08c47fec0942fa0
+spotxchange.com, 271911, RESELLER, 7842df1d2fe2db34
+spotx.tv, 271911, RESELLER, 7842df1d2fe2db34
+smartadserver.com, 3686, RESELLER 
+rhythmone.com, 456081263, RESELLER, a670c89d4a324e47
+video.unrulymedia.com, 456081263, RESELLER
