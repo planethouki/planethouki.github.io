@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>planethouki</title>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="./index.js"></script>
+</head>
+<body>
+  <a-scene vr-mode-ui="enabled: false">
+    <a-assets>
+      <img id="icon" src="../img/icon_white.jpg" />
+      <img id="twitter" src="../img/twitter.jpg" />
+      <img id="github" src="../img/github.jpg" />
+    </a-assets>
+
+    <a-sky color="#ECECEC"></a-sky>
+
+    <a-entity camera look-controls position="0 1.6 0">
+      <a-entity raycaster="objects: .collidable" cursor="rayOrigin: mouse"></a-entity>
+    </a-entity>
+
+    <a-plane
+      cursor-listener="url: https://www.google.co.jp"
+      position="0 2 -4"
+      width="2"
+      height="2"
+      material="src: #icon"
+      class="collidable"
+    >
+      <a-text
+        value="planet★箒星"
+        align="center"
+        color="black"
+        font="custom-msdf.json"
+        negate="false"
+        position="0 1.5 0"
+        ></a-text>
+    </a-plane>
+
+    <a-plane
+      cursor-listener="url: https://twitter.com/planethouki"
+      position="2 2 -3"
+      height="1"
+      width="2.9"
+      scale="0.5 0.5 0.5"
+      rotation="0 -20 0"
+      material="src: #twitter"
+      class="collidable"
+    >
+      <a-text
+        value="twitter"
+        align="center"
+        color="black"
+        position="0 0.7 0"
+      ></a-text>
+    </a-plane>
+
+    <a-plane
+      cursor-listener="url: https://github.com/planethouki"
+      position="-2 2 -3"
+      height="1"
+      width="2.9"
+      scale="0.5 0.5 0.5"
+      rotation="0 20 0"
+      material="src: #github"
+      class="collidable"
+    >
+      <a-text
+        value="github"
+        align="center"
+        color="black"
+        position="0 0.7 0"
+      ></a-text>
+    </a-plane>
+
+  </a-scene>
+
+</body>
+</html>
